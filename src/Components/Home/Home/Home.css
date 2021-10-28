@@ -1,0 +1,16 @@
+.home-container{
+    background-color:#FBD062 ;
+    padding: 2em;
+    position: relative;
+      min-height:560px;
+      overflow:hidden;
+}
+
+.home-container::after {
+    content: '';
+    position: absolute;
+    bottom: -88%; left: 0; right: 0;
+    height:100%;
+    background:#FFF;
+    transform: skew(0deg, -5deg);
+  }

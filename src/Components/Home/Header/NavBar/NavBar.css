@@ -1,0 +1,13 @@
+a.my-nav.nav-link {
+    margin-right: 25px;
+}
+ .primary-btn{
+     background-color:#474747;
+     padding: 8px 24px;
+     border: radius 5px;
+     color: #fff;
+ }
+ .primary-btn:hover{
+     background-color:black;
+     color: orange;
+ }
