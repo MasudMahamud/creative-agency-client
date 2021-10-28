@@ -1,14 +1,15 @@
 import React from 'react';
 import './Home.css';
-
 import Header from '../Header/Header/Header';
+import Sponsor from '../Sponsor/Sponsor';
+import Service from '../Service/Service';
 
 const Home = () => {
     return (
         <>
-            < div className=" home-container">
-                <Header></Header>
-            </div>
+            <Header></Header>
+            <Sponsor></Sponsor>
+            <Service></Service>
         </>
 
     );
