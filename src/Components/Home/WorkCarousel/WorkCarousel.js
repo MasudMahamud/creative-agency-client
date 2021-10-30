@@ -30,7 +30,7 @@ const WorkImage = [
 const WorkCarousel = () => {
     return (
         <div className="container my-5 py-5" style={{ backgroundColor: '#111430', height: '600px' }}>
-            <h3 className="my-5" style={{ textAlign: 'center', color: '#ddd' }}> Here are some work of our </h3>
+            <h3 className="my-5" style={{ textAlign: 'center', color: '#ddd' }}> Here are <span style={{ color: 'orange' }}> some work</span> of our </h3>
             <div className="row">
                 <HorizontalGallery
                     tiles={WorkImage.map((value) => (
