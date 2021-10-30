@@ -3,6 +3,7 @@ import './Home.css';
 import Header from '../Header/Header/Header';
 import Sponsor from '../Sponsor/Sponsor';
 import Service from '../Service/Service';
+import WorkCarousel from '../WorkCarousel/WorkCarousel';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Header></Header>
             <Sponsor></Sponsor>
             <Service></Service>
+            <WorkCarousel></WorkCarousel>
         </>
 
     );
