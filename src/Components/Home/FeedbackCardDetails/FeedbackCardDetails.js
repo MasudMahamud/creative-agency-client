@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 
 const FeedbackCardDetails = ({ client }) => {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 my-4">
             <Card>
                 <Card.Header> <img src={client.imagUrl} alt="" style={{ maxWidth: '60px' }} /> </Card.Header>
                 <Card.Body>

@@ -1,5 +1,4 @@
 import React from 'react';
-import ActionAreaCard from '../FeedbackCardDetails/FeedbackCardDetails';
 import FeedbackCardDetails from '../FeedbackCardDetails/FeedbackCardDetails';
 
 const ClientDetails = [

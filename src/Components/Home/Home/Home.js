@@ -5,6 +5,7 @@ import Sponsor from '../Sponsor/Sponsor';
 import Service from '../Service/Service';
 import WorkCarousel from '../WorkCarousel/WorkCarousel';
 import FeedbackCard from '../FeedbackCard/FeedbackCard';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Service></Service>
             <WorkCarousel></WorkCarousel>
             <FeedbackCard></FeedbackCard>
+            <Contact></Contact>
         </>
 
     );
