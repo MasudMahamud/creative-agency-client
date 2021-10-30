@@ -1,6 +1,8 @@
-a.my-nav.nav-link {
-    margin-right: 25px;
-}
+.my-nav a{
+    text-decoration: none;
+    margin-right: 40px ;
+    color: black; 
+ }
  .primary-btn{
      background-color:#474747;
      padding: 8px 24px;

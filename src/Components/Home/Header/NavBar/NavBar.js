@@ -2,10 +2,11 @@ import React from 'react';
 import './NavBar.css';
 import logo from '../../../../images/logos/logo.png'
 import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div className="container">
+        <div className="container my-nav">
             <Navbar expand="lg">
                 <Container fluid>
                     <Navbar.Brand href="#"> <img style={{ width: '120px' }} src={logo} alt="" /> </Navbar.Brand>
@@ -16,16 +17,16 @@ const NavBar = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link to="/" className="my-nav" active>Home</Nav.Link>
-                            <Nav.Link to="/" className="my-nav">Our Portfolio</Nav.Link>
+                            <Link to="/home" active>Home</Link>
+                            <Link to="/portfolio" >Our Portfolio</Link>
 
-                            <Nav.Link to="/" className="my-nav">Our Team </Nav.Link>
+                            <Link to="/team" >Our Team </Link>
 
-                            <Nav.Link to="/" className="my-nav">contact us </Nav.Link>
+                            <Link to="/" id="contract" >contact us </Link>
 
-                            <Nav.Link to="/">
+                            <Link to="/login">
                                 <span className="primary-btn my-nav" >login</span>
-                            </Nav.Link>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

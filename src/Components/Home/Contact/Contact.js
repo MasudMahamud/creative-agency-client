@@ -11,7 +11,7 @@ const handleSubmit = (e) => {
 
 const Contact = () => {
     return (
-        <div className="container mt-4 py-4" style={{ backgroundColor: '#FBD062' }}>
+        <div className="container mt-4 py-4" style={{ backgroundColor: '#FBD062' }} id="contract">
             <div className="row p-3">
                 <div className="col-md-5 p-3 ms-3">
                     <h2> Let us handle your <br /> project professionally </h2>
@@ -28,15 +28,15 @@ const Contact = () => {
                             <input onBlur={handleBlur} type="text" class="form-control" name="name" placeholder="Enter Name" />
                         </div>
                         <div className="form-group mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">message</label>
-                        <textarea onBlur={handleBlur} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
+                            <label for="exampleFormControlTextarea1" class="form-label">message</label>
+                            <textarea onBlur={handleBlur} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
-            <div className="mt-5 text-center" style={{color:'#333'}}>
+            <div className="mt-5 text-center" style={{ color: '#333' }}>
                 <p>copyright creative agency -{(new Date()).getFullYear()}</p>
             </div>
         </div>
