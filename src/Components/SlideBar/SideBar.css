@@ -1,0 +1,8 @@
+.my-nav a{
+    text-decoration: none;
+    margin-right: 40px ;
+    color: black; 
+ }
+ .my-nav a:hover{
+     color:'#fff'
+ }
