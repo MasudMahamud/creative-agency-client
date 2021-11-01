@@ -14,7 +14,7 @@ const Order = () => {
                     <SideBar></SideBar>
                 </div>
                 <div className="col-md-10">
-                    <h4 className="pt-3 ms-2" style={{color: '#888'}}>Order</h4> <hr />
+                    <h4 className="pt-3 ms-2" style={{ color: '#888' }}>Order</h4> <hr />
                     <div className="p-2">
                         <form onSubmit={handleSubmit}>
                             <div class="form-group mb-3">
@@ -37,9 +37,8 @@ const Order = () => {
                                     <label for="exampleInputPassword1">Upload project file:</label>
                                     <input onBlur={handleBlur} type="file" class="form-control" />
                                 </div>
-                            </div> 
-
-                            <div className="submit-btn" style={{ width: '60px' }}>
+                            </div>
+                            <div className="submit-btn mt-3" style={{ width: '60px' }}>
                                 <button type="submit" class="btn btn-secondary">Submit</button>
                             </div>
                         </form>

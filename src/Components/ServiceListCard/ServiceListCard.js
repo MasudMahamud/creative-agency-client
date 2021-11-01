@@ -4,7 +4,7 @@ import { Card, Image } from 'semantic-ui-react'
 
 const ServiceListCard = ({ service }) => {
     return (
-        <div className="col-md-4 col-sm-6 col-6 mt-5">
+        <div className="col-md-4 col-sm-6 col-12 p-3 mb-2">
             <Card.Group>
                 <Card className="p-3 text-center">
                     <Card.Content>
