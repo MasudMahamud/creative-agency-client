@@ -8,8 +8,8 @@ const Review = () => {
                 <div className="col-md-2">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-10 p-5">
-                    <h1> review section</h1>
+                <div className="col-md-10">
+                    <h4 className="pt-3 ms-2" style={{ color: '#888' }}>Review</h4> <hr />
                 </div>
             </div>
         </div>
