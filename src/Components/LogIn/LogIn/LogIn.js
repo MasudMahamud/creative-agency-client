@@ -8,6 +8,7 @@ import { Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import NavBar from '../../Home/Header/NavBar/NavBar';
+import GoogleIcon from '@mui/icons-material/Google';
 
 const LogIn = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -37,7 +38,7 @@ const LogIn = () => {
             <div className="logIn-box">
                 <h3 > Login with </h3>
                 <p className="login-button">
-                    <Button onClick={handleGoogleLogin} color="success" variant="outline-info"> google</Button>
+                    <Button onClick={handleGoogleLogin} color="success" variant="outline-info"> <GoogleIcon/> Google</Button>
                 </p>
             </div>
 

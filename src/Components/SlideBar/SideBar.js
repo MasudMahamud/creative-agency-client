@@ -21,10 +21,10 @@ const SideBar = () => {
                             navbarScroll
                         >
                             <Navbar.Brand href="#"> <img style={{ width: '100px' }} src={logo} alt="" /> </Navbar.Brand>
-                            <Link className="p-2 mt-5 bd-highlight" to="/home"> <HomeIcon/>  Home </Link>
-                            <Link className="p-2 bd-highlight" to="/order"><AddShoppingCartIcon/> Order </Link>
-                            <Link className="p-2 bd-highlight" to="/list" ><LowPriorityIcon/> Service</Link>
-                            <Link className="p-2 bd-highlight" to="/review"><ReviewsIcon/> Review  </Link>
+                            <Link className="p-2 mt-5 bd-highlight" to="/home" style={{color: '#888'}}> <HomeIcon/>  Home </Link>
+                            <Link className="p-2 bd-highlight" to="/order" style={{color: '#888'}}><AddShoppingCartIcon/> Order </Link>
+                            <Link className="p-2 bd-highlight" to="/list" style={{color: '#888'}}><LowPriorityIcon/> Service</Link>
+                            <Link className="p-2 bd-highlight" to="/review" style={{color: '#888'}}><ReviewsIcon/> Review  </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
