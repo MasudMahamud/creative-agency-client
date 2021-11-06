@@ -2,6 +2,7 @@ import React from 'react';
 import ServiceListCard from '../ServiceListCard/ServiceListCard';
 import SideBar from '../SlideBar/SideBar';
 
+
 const serviceListInfo = [
     {
         id: '1',
@@ -24,9 +25,11 @@ const ServiceList = () => {
                 <div className="col-md-2">
                     <SideBar></SideBar>
                 </div>
+                
                 {
                     serviceListInfo.map(service => <ServiceListCard service={service} key={service.id}></ServiceListCard>)
                 }
+                
             </div>
         </div>
     );

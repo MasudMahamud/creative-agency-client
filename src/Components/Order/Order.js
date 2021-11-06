@@ -1,19 +1,20 @@
 import React from 'react';
 import SideBar from '../SlideBar/SideBar';
-
+import { useParams } from 'react-router-dom';
 
 const handleBlur = data => console.log(data);
 
 const handleSubmit = data => console.log(data);
 
 const Order = () => {
+    const { title } = useParams();
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-2">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10" style={{backgroundColor: 'azure'}}>
                     <h4 className="pt-3 ms-2" style={{ color: '#888' }}>Order</h4> <hr />
                     <div className="p-2">
                         <form onSubmit={handleSubmit}>
@@ -24,7 +25,7 @@ const Order = () => {
                                 <input onBlur={handleBlur} type="email" class="form-control" name="email" placeholder="Your email" />
                             </div>
                             <div class="form-group mb-3">
-                                <input onBlur={handleBlur} type="text" class="form-control" name="title" placeholder="Your title" />
+                                <input onBlur={handleBlur} type="text" class="form-control" name="title" value={title} placeholder="Your title" /> 
                             </div>
                             <div className="form-group mb-3">
                                 <textarea onBlur={handleBlur} class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="project details" />

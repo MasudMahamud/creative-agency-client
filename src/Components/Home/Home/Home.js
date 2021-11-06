@@ -17,7 +17,6 @@ const Home = () => {
             <FeedbackCard></FeedbackCard>
             <Contact></Contact>
         </>
-
     );
 };
 

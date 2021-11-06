@@ -17,14 +17,16 @@ const SideBar = () => {
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
                             className="navbar-light d-flex flex-column bd-highlight mb-3"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
+                            style={{ maxHeight: '180px' }}
                         >
-                            <Navbar.Brand href="#"> <img style={{ width: '100px' }} src={logo} alt="" /> </Navbar.Brand>
-                            <Link className="p-2 mt-2 bd-highlight" to="/home" style={{color: '#888'}}> <HomeIcon/>  Home </Link>
-                            <Link className="p-2 bd-highlight" to="/order" style={{color: '#888'}}><AddShoppingCartIcon/> Order </Link>
-                            <Link className="p-2 bd-highlight" to="/list" style={{color: '#888'}}><LowPriorityIcon/> Service</Link>
-                            <Link className="p-2 bd-highlight" to="/review" style={{color: '#888'}}><ReviewsIcon/> Review  </Link>
+                            <Link className="p-2 bd-highlight" to="/home"> <img style={{ width: '100px' }} src={logo} alt="" /> </Link>
+                            <Link className="p-2 mt-2 bd-highlight" to="/home" style={{ color: '#888' }}> <HomeIcon />  Home </Link>
+                            <Link className="p-2 bd-highlight" to="/order" style={{ color: '#888' }}><AddShoppingCartIcon /> Order </Link>
+                            <Link className="p-2 bd-highlight" to="/list" style={{ color: '#888' }}><LowPriorityIcon /> Service</Link>
+                            <Link className="p-2 bd-highlight" to="/review" style={{ color: '#888' }}><ReviewsIcon /> Review  </Link>
+                            <Link className="mt-2 bd-highlight" to="/allServiceList" style={{ color: '#888' }}><AddShoppingCartIcon /> Service list </Link>
+                            <Link className="mt-2 bd-highlight" to="/addService" style={{ color: '#888' }}><LowPriorityIcon />add Service</Link>
+                            <Link className="mt-2 bd-highlight" to="/makeAdmin" style={{ color: '#888' }}><ReviewsIcon /> Make admin  </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
