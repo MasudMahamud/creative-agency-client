@@ -17,7 +17,7 @@ const SideBar = () => {
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
                             className="navbar-light d-flex flex-column bd-highlight mb-3"
-                            style={{ maxHeight: '180px' }}
+                            style={{ maxHeight: '290px' }}
                         >
                             <Link className="p-2 bd-highlight" to="/home"> <img style={{ width: '100px' }} src={logo} alt="" /> </Link>
                             <Link className="p-2 mt-2 bd-highlight" to="/home" style={{ color: '#888' }}> <HomeIcon />  Home </Link>

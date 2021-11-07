@@ -1,11 +1,12 @@
 import React from 'react';
 import SideBar from '../../SlideBar/SideBar';
 
-const handleBlur = data => console.log(data);
 
-const handleSubmit = data => console.log(data);
 
 const AddAdmin = () => {
+    const handleBlur = data => console.log(data);
+
+const handleSubmit = data => console.log(data);
     return (
         <div className="container">
             <div className="row">

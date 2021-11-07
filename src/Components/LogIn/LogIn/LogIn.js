@@ -7,9 +7,9 @@ import { UserContext } from '../../../App';
 import { Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-
 import GoogleIcon from '@mui/icons-material/Google';
 import NavBar from '../../Home/Shared/NavBar/NavBar';
+
 
 const LogIn = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);

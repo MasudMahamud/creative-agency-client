@@ -1,49 +1,73 @@
 import React from 'react';
 import SideBar from '../SlideBar/SideBar';
 import { useParams } from 'react-router-dom';
-
-const handleBlur = data => console.log(data);
-
-const handleSubmit = data => console.log(data);
+import { useForm } from 'react-hook-form';
 
 const Order = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
     const { title } = useParams();
+
+    const onSubmit = data => {
+        fetch('http://localhost:4000/addOrder', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result =>{
+            if (result===false) {
+              alert('Thanks for order!')  
+            }
+        })
+    }
+
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-2">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-10" style={{backgroundColor: 'azure'}}>
+                <div className="col-md-10" style={{ backgroundColor: 'azure' }}>
                     <h4 className="pt-3 ms-2" style={{ color: '#888' }}>Order</h4> <hr />
-                    <div className="p-2">
-                        <form onSubmit={handleSubmit}>
-                            <div class="form-group mb-3">
-                                <input onBlur={handleBlur} className="form-control" type="text" class="form-control" name="name" placeholder="Your name/company's name" />
+
+                    <form className="p-4 rounded" onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-group">
+                            <input type="text" {...register('name', { required: true })} name="name" placeholder="Your name/company's name" className="form-control" />
+                            {errors.name && <span className="text-danger">This field is required</span>}
+                        </div> <br />
+                        <div className="form-group">
+                            <input type="text" {...register('email', { required: true })} name="email" placeholder="Your email" className="form-control" />
+                            {errors.email && <span className="text-danger">This field is required</span>}
+                        </div><br />
+                        <div className="form-group">
+                            <input type="text" {...register('title', { required: true })} name="title" value={title} placeholder="project title" className="form-control" />
+                            {errors.title && <span className="text-danger">This field is required</span>}
+                        </div><br />
+                        <div className="form-group">
+                            <textarea type="text" {...register('projectDetails', { required: true })} name="projectDetails" placeholder="project details" className="form-control" />
+                            {errors.projectDetails && <span className="text-danger">This field is required</span>}
+                        </div><br />
+
+                        <div className="float-left mb-4 ">
+                            <div className="form-group float-sm-start" >
+                                <label for="ProjectPrice">Project Price:</label>
+                                <input type="number" {...register('price', { required: true })} name="price" placeholder="price" className="form-control" />
+                                {errors.price && <span className="text-danger">This field is required</span>}
                             </div>
-                            <div class="form-group mb-3">
-                                <input onBlur={handleBlur} type="email" class="form-control" name="email" placeholder="Your email" />
+                            <div className="form-group float-sm-end">
+                                <label for="exampleInputPassword1">Upload project file:</label>
+                                <input type="file" className="form-control" />
                             </div>
-                            <div class="form-group mb-3">
-                                <input onBlur={handleBlur} type="text" class="form-control" name="title" value={title} placeholder="Your title" /> 
-                            </div>
-                            <div className="form-group mb-3">
-                                <textarea onBlur={handleBlur} class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="project details" />
-                            </div>
-                            <div className="float-left mb-3">
-                                <div class="form-group mb-3 float-sm-start">
-                                    <input onBlur={handleBlur} type="number" class="form-control" name="price" placeholder="price" />
-                                </div>
-                                <div class="form-group mb-3 float-sm-end">
-                                    <label for="exampleInputPassword1">Upload project file:</label>
-                                    <input onBlur={handleBlur} type="file" class="form-control" />
-                                </div>
-                            </div>
-                            <div className="submit-btn mt-3" style={{ width: '60px' }}>
-                                <button type="submit" class="btn btn-secondary">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <div className="form-group">
+                            <button type="submit" class="btn btn-secondary">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
