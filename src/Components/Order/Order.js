@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SideBar from '../SlideBar/SideBar';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { UserContext } from '../../App';
 
 const Order = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const { title } = useParams();
+    const { name } = useParams();
 
     const onSubmit = data => {
         fetch('http://localhost:4000/addOrder', {
@@ -17,12 +19,12 @@ const Order = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result =>{
-            if (result===false) {
-              alert('Thanks for order!')  
-            }
-        })
+            .then(res => res.json())
+            .then(result => {
+                if (result === false) {
+                    alert('Thanks for order!')
+                }
+            })
     }
 
     return (
@@ -40,11 +42,11 @@ const Order = () => {
                             {errors.name && <span className="text-danger">This field is required</span>}
                         </div> <br />
                         <div className="form-group">
-                            <input type="text" {...register('email', { required: true })} name="email" placeholder="Your email" className="form-control" />
+                            <input type="text" {...register('email', { required: true })} name="email" value={loggedInUser.email} placeholder="Your email" className="form-control" />
                             {errors.email && <span className="text-danger">This field is required</span>}
                         </div><br />
                         <div className="form-group">
-                            <input type="text" {...register('title', { required: true })} name="title" value={title} placeholder="project title" className="form-control" />
+                            <input type="text" {...register('title', { required: true })} name="title" value={name} placeholder="project title" className="form-control" />
                             {errors.title && <span className="text-danger">This field is required</span>}
                         </div><br />
                         <div className="form-group">

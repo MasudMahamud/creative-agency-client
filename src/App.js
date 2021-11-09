@@ -31,46 +31,48 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+
             <Route path="/login">
-              <LogIn></LogIn>
+              <LogIn />
             </Route>
-            <PrivateRoute path="/order/:title">
-            <Order></Order>
+
+            <PrivateRoute path="/order/:name">
+              <Order />
             </PrivateRoute>
 
             <Route path="/portfolio">
-              <OurPortfolio></OurPortfolio>
+              <OurPortfolio />
             </Route>
 
             <Route path="/team">
-              <OurTeam></OurTeam>
+              <OurTeam />
             </Route>
 
-            <Route path="/order">
-              <Order></Order>
-            </Route>
+            <PrivateRoute path="/order">
+              <Order />
+            </PrivateRoute>
+
             <Route path="/list">
-              <ServiceList></ServiceList>
+              <ServiceList />
             </Route>
             <Route path="/review">
-              <Review></Review>
+              <Review />
             </Route>
-            {/* admin */}
+
             <Route path="/allServiceList">
-              <AllServiceList></AllServiceList>
+              <AllServiceList />
             </Route>
             <Route path="/addService">
-              <AddService></AddService>
+              <AddService />
             </Route>
             <Route path="/makeAdmin">
-              <AddAdmin></AddAdmin>
+              <AddAdmin />
             </Route>
 
             <Route exact path="/">
               <Home />
             </Route>
           </Switch>
-
         </Router>
       </div>
     </UserContext.Provider>

@@ -1,8 +1,14 @@
-.my-nav a{
-    text-decoration: none;
-    margin-right: 40px ;
-    color: black; 
- }
- .my-nav a:hover{
-     color:'#fff'
- }
+.sidebar{
+    background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
+}
+.sidebar li{
+    margin-bottom: 2em;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
+.sidebar svg{
+    margin-right: 5px;
+}
+a{text-decoration: none;color: rgb(46, 30, 30)}

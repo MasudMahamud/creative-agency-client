@@ -1,5 +1,5 @@
 import React from 'react';
-import HorizontalGallery from 'react-dynamic-carousel'
+import HorizontalGallery from 'react-dynamic-carousel';
 
 
 const WorkImage = [

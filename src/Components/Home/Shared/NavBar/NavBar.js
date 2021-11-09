@@ -5,6 +5,7 @@ import { Nav, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+
     return (
         <div className="container my-nav">
             <Navbar expand="lg">
@@ -19,10 +20,12 @@ const NavBar = () => {
                             <Link to="/home" active>Home</Link>
                             <Link to="/portfolio" >Our Portfolio</Link>
                             <Link to="/team" >Our Team </Link>
-                            <Link to="/" id="contract" >contact us </Link>
-                            <Link to="/login" className="primary-btn my-nav">
-                                <span> login</span>
+                            <Link to="/">contact us </Link>                         
+
+                            <Link to="/order" className="primary-btn my-nav">
+                                <span> order</span>
                             </Link>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

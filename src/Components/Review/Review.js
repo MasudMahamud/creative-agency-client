@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SideBar from '../SlideBar/SideBar';
 
-const handleBlur = data => console.log(data);
-
-const handleSubmit = data => console.log(data);
-
 const Review = () => {
+    const [review, setReview] = useState({});
+
+    const handleBlur = e => {
+        const newInfo = { ...review };
+        newInfo[e.target.name] = e.target.value;
+        setReview(newInfo);
+
+    }
+
+    const handleSubmit = e => {
+        const formData = new FormData()
+        formData.append('name', review.name);
+        formData.append('designation', review.designation);
+        formData.append('description', review.description);
+
+        fetch('http://localhost:4000/addReview', {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+            })
+    }
     return (
         <div className="container">
             <div className="row">
@@ -19,10 +39,10 @@ const Review = () => {
                             <input onBlur={handleBlur} className="form-control" type="text" class="form-control" name="name" placeholder="Your name " />
                         </div>
                         <div class="form-group mb-3">
-                            <input onBlur={handleBlur} className="form-control" type="text" class="form-control" name="name" placeholder="company's name/ Designation" />
+                            <input onBlur={handleBlur} className="form-control" type="text" class="form-control" name="designation" placeholder="company's name/ Designation" />
                         </div>
                         <div className="form-group mb-3">
-                            <textarea onBlur={handleBlur} class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description" />
+                            <textarea onBlur={handleBlur} class="form-control" type="text" rows="3" name="description" placeholder="Description" />
                         </div>
                         <div className="submit-btn" style={{ width: '60px' }}>
                             <button type="submit" class="btn btn-dark">Submit</button>
